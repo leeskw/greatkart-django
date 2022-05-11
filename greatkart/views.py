@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.urls import is_valid_path
 from store.models import Product
 
 

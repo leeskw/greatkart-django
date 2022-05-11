@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'carts.apps.CartsConfig',  # new
     'store.apps.StoreConfig',  # new
     'accounts.apps.AccountsConfig',  # new
     'category.apps.CategoryConfig',  # new
@@ -61,8 +62,8 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'category.context_processors.menu_links',   # new
-                'django.template.context_processors.debug',
+                'carts.context_processors.counter',  # new
+                'category.context_processors.menu_links',  # new
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
